@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+   font-family: sans-serif;
+   background: rgb(80, 210, 80);
+   width: 220px;
+   align-items: center;
+   justify-content: center;
+   border-radius: 20px;
+   font-size: 40px;
+}
+
+body{
+   background: rgb(244, 246, 244);
+}
+.form{
+   border: solid 1px rgb(96, 250, 96);
+   border-radius: 10px;
+   cursor: pointer;
+   display: block;
+}
+#oppt{
+   width: 170px;
+   height: 20px;
+   
+}
+textarea{
+   width: 400px;
+   height: 80px;
+}
+#btn{
+   width: 100%;
+   background: blue;
+   color: white;
+   height: 30px;
+   cursor: pointer;
+}
+    </style>
+</head>
+<body>
+<span class="h"><h1>Contact us</h1></span>
+<p>Please use this form to if you would like information about <strong>Work Force Training and continuing Education</strong>.</p>
+<ul>
+    <li>course-customization information for your business.</li>
+    <li>non-credit continuing education courses.</li>
+    <li>To submit feedback or to contact Workf 
+        Force Training and continuing Education, please fill out
+         the form below and click "submit"</li>
+</ul>
+<p><em>if you are a Saint paul college student looking for information about our major programs and credit courses, please fill out <a href="">Saint paul college request form</a>   </em></p>
+<h4>Information Available-select all business-related information you would like sent to you.</h4>
+ <form action="/submit" method="post">
+    <input type="radio"> Send me a copy of your current course schedule <br>
+    <input type="radio"> Information about course-customizatin for my businesses
+<div class="form">
+<table>
+    <th>
+        <form action="/submit" method="post">
+
+            <label for="first name">First Name</label><br>
+            <input type="text" id="name" name="name">
+        </form>
+    </th>
+    <th>
+       <form action="/submit" method="post">
+            <label for="first name">Last Name</label><br>
+            <input type="text" id="lname" name="lname">
+    
+        </form>
+        
+    </th>
+</table>
+
+<table>
+    <th>
+        <form action="/submit" method="post">
+
+            <label for="email">Email Adress</label><br>
+            <input type="text" id="email" name="email" size="12">
+        </form>
+    </th>
+    <th>
+       <form action="/submit" method="post">
+            <label for="first name">Phone</label><br>
+            <input type="text" id="Phone" name="name" size="11">
+        </form>
+    </th>
+    <th>
+        <form action="/submit" method="post">
+             <label for="Company">Company</label><br>
+             <input type="text" id="Company name="Company" size="11">
+         </form>
+     </th>
+</table>
+<table>
+    <th>
+        <div class="opt" >State <br>
+            <select name="option" id="oppt" >
+                <option value="select">select your State</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Canada">Canada</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Germen">Germen</option>
+                <option value="India">India</option>
+                <option value="Australia">Australia</option>
+                <option value="America">America</option>
+                <option value="Italy">Italy</option>
+                <option value="Sudan">Sudan</option>
+            </select>
+        </div>
+    </th>
+    <th>
+       <form action="/submit" method="post">
+            <label for="zip">Zip</label><br>
+            <input type="text" id="zip" name="zip">
+    
+        </form>
+        
+    </th>
+</table>
+
+</div>
+<h4>Feedback-Please enter any comments or questions you have about Continuing and Training Education.</h4>
+
+<textarea name="text area" id="area" placeholder=""></textarea>
+<div id="bb"></div>
+<p><strong>Help us prevent spam reports </strong>by completing this capcha.</p>
+<button id="btn">Submit</button>
+
+<script>
+    const but = document.getElementById('area').addEventListener('click',function () {
+    document.getElementById('bb').textContent = 'Welcome !';
+
+ });
+</script>
+</body>
+</html>
+

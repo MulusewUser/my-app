@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background: rgb(17, 17, 17);
+        }
+        body{
+            margin: 1px;
+            justify-content: center;
+            display: fle;
+            height: 100vh;
+            align-items: center;
+            display: flex;
+            
+           
+    
+
+        }
+        #keys{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        padding: 25px;
+        gap: 25px;
+        }
+        #display{
+            max-width: 500px;
+            background: rgb(24, 43, 28);
+            padding: 10pxx;
+            font-size: 2rem;
+            border: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: white;
+            text-align: left;
+            border-radius: 10px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            height: 160px;
+            display: flex;
+            
+
+        }
+        button{
+
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 20px;
+           background: rgb(2, 58, 2);
+            color: beige;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background: rgb(175, 163, 163);
+            color: rgb(17, 17, 17);
+            padding: 3px;
+        }
+        button:active{
+            background: white;
+            color: red;
+    
+            
+        }
+        #calculator{
+font-family: sans-serif;
+background: rgb(58, 55, 55);
+border: none;
+border-radius: 25px;
+max-width: 500px;
+overflow: hidden;
+height: 10;
+gap: 10px;
+justify-content: center;
+        }
+        
+    .operato{
+        font-size: 20px;
+        height: 70px;
+        background: red;
+
+    }
+        
+        .operator{
+            border-radius: 10px;
+            height: 60px;
+            background: rgb(26, 26, 85);
+        }
+        
+        #del{
+            background: white;
+            color: red;
+            border-radius: 50px;
+            align-items: center;
+            margin-left: 350px;
+            height: 40px;
+            font-size: 2rem;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" readonly>
+        <button onclick="delet('')" id="del">x</button>
+        <div id="keys">
+        
+            <button onclick="appendToDisplay('+')" class="operator">+</button>
+            <button onclick="appendToDisplay('1')" >1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')" class="operator">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operator">*</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')" class="operator">/</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate('')" class="operator">=</button>
+            <button onclick="clearDisplay('')" class="operator">C</button>
+            <button onclick="percent('%')" class="operator">%</button>
+            <button onclick="pi('')" class="operator">Pi</button>
+            <button onclick="my('+')" class="operato">Click me!</button>
+            
+
+        </div>
+
+    </div>
+</body>
+<script>
+    const display = document.getElementById("display");
+function appendToDisplay(input) {
+    display.value += input;
+}
+
+function clearDisplay() {
+    display.value="";
+}
+
+function calculate() {
+   try {
+    display.value = eval(display.value)
+   } catch (error) {
+    display.value = "Error"
+   }
+}
+
+function percent() {
+    display.value = display.value *0.01;
+}
+function pi() {
+    display.value = 3.14112222;
+}
+function my() {
+    display.value = "Hi! እንኳን ደህና መጡ !";
+}
+</script>
+</html>

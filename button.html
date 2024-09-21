@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background: green;
+            width: 200px;
+            height: 200px;
+            font-size: 2em;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+            border-radius: 30px;
+        }
+        #myButt{
+            background: blue;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body id="bo">
+    <div id="box"> I am a box</div>
+    <button id="myButt">click me</button>
+<h1> </h1>
+</body>
+<script>
+    const box = document.getElementById('box');
+    const button = document.getElementById('myButt');
+    const body = document.getElementById('bo');
+button.addEventListener('click', event=>{
+    box.style.background = 'green';
+    box.style.color = 'blue';
+    box.style.border = 'solid blue';
+    box.textContent = 'I am blue 👮‍♀️'
+});
+button.addEventListener('mouseover', event=>{
+    box.style.background = 'black';
+    box.style.color = 'red';
+    box.style.border = 'solid red';
+    box.textContent = 'I am red 🤳';
+    button.textContent = 'mouse out for yellow';
+});
+button.addEventListener('mouseout', event=>{
+   
+    box.style.background = 'grey';
+    box.style.color = 'yellow';
+    box.style.border = 'solid yellow';
+    box.textContent = 'I am yellow 👱‍♀️
+    ';
+    button.textContent = 'mouse over for red';
+});
+body.addEventListener('keypress', event=>{
+   if (nn===3) {
+    console.log('you are pressing 3');
+    
+   }
+box.style.background = 'white';
+box.textContent = 'you are pressing something'
+});
+</script>
+</html>
